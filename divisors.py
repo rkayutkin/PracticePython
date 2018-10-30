@@ -4,4 +4,6 @@ dl = []
 
 for i in a:
     if number % i == 0:
-        print(dl.append(i))
+        dl.append(i)
+
+print (dl)
