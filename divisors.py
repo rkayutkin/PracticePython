@@ -6,5 +6,4 @@ for i in a:
     if number % i == 0:
         dl.append(i)
 
-print ()
 print (dl)
