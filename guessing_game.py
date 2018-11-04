@@ -2,10 +2,12 @@ import random
 
 def game():
     answer = random.randint(1, 10)
+    guesses=0
     print (answer)
     while True:
         try:
             userguess = int(input("Guess a number between 1 and 9:\n"))
+            guesses+=1
         except ValueError:
             print ("Please enter a number!!!\n")
             continue
@@ -17,6 +19,7 @@ def game():
             continue
         elif answer == userguess:
             print ("You have guessed the correct number!!\n")
+            print ("It took you", str(guesses), "Guesses")
             repeat = input("Would you like to play again?\n")
             break
     return repeatgame(repeat)
