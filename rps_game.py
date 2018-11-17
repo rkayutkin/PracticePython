@@ -27,13 +27,22 @@ def players():
     return logic(Player1, Player2)
 
 def logic(Player1, Player2):
-    "rock" > "scissors"
-    "scissors" > "paper"
-    "paper" > "rock"
-    if Player1 > Player2:
+    if Player1 == "paper" and Player2 == "rock":
         print ("Congragulations Player 1!!!")
         repeat = input("Would you like to play again?:\n ")
-    elif Player2 > Player1:
+    elif Player2 == "paper" and Player1 == "rock":
+        print ("Congragulations Player 2!!!")
+        repeat = input("Would you like to play again?:\n ")
+    elif Player1 == "rock" and Player2 == "scissors":
+        print ("Congragulations Player 1!!!")
+        repeat = input("Would you like to play again?:\n ")
+    elif Player2 == "rock" and Player1 == "scissors":
+        print ("Congragulations Player 2!!!")
+        repeat = input("Would you like to play again?:\n ")
+    elif Player1 == "scissors" and Player2 == "paper":
+        print ("Congragulations Player 1!!!")
+        repeat = input("Would you like to play again?:\n ")
+    elif Player2 == "scissors" and Player1 == "paper":
         print ("Congragulations Player 2!!!")
         repeat = input("Would you like to play again?:\n ")
     elif Player1 == Player2:
