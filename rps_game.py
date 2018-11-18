@@ -1,5 +1,8 @@
+import os
+
 def players():
     while True:
+        os.system('clear')
         print ("Welcome to the simple game of Rock, Paper, Scissors!!!\n\n ")
         Player1 = input("Player 1, please choose one option: \n-Rock \n-Paper \n-Scissors\n\n ")
         Player1 = Player1.lower()
@@ -13,6 +16,7 @@ def players():
             print ("Player 1 didn't choose a valid option.\n ")
             continue
     while True:
+        os.system('clear')
         Player2 = input("Player 2, please choose one option: \n-Rock \n-Paper \n-Scissors\n\n ")
         Player2 = Player2.lower()
         if Player2 in ["rock", "paper", "scissors"]:
@@ -27,6 +31,7 @@ def players():
     return logic(Player1, Player2)
 
 def logic(Player1, Player2):
+    os.system('clear')
     if Player1 == "paper" and Player2 == "rock":
         print ("Congragulations Player 1!!!")
         repeat = input("Would you like to play again?:\n ")
@@ -55,16 +60,20 @@ def logic(Player1, Player2):
         print ("Thaks for playing!!!\n ")
         print (exit())
     while True:
+        os.system('clear')
         if repeat == "no":
             print ("Thaks for playing!!!\n ")
+            os.system('clear')
             break
         if repeat == "yes":
             return players()
         if repeat in ["exit", "quit"]:
             print ("Thaks for playing!!!\n ")
+            os.system('clear')
             print (exit())
         else:
             print ("Please Choose a valid option!!\n ")
+            os.system('clear')
             repeat = input("Would you like to play again?:\n ")
 
 players()
